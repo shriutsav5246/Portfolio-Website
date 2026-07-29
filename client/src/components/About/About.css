@@ -1,0 +1,374 @@
+/* ==================================================
+                ABOUT SECTION
+================================================== */
+
+.about {
+  padding: 120px 8%;
+
+  background: var(--bg-color);
+}
+
+.about .container {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 120px;
+}
+/* ==================================================
+                INTRO SECTION
+================================================== */
+
+.intro-section {
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+
+  min-height: 85vh;
+}
+
+.intro-image {
+  display: flex;
+
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 100%;
+
+  max-width: 380px;
+
+  border-radius: 30px;
+
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 45px rgba(59, 130, 246, 0.15);
+}
+
+.intro-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.intro-tag {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  border-radius: 999px;
+
+  background: rgba(59, 130, 246, 0.12);
+
+  color: var(--primary);
+
+  font-weight: 600;
+
+  margin-bottom: 25px;
+}
+
+.intro-content h2 {
+  font-size: 3.6rem;
+
+  margin-bottom: 15px;
+}
+
+.intro-content h3 {
+  font-size: 1.7rem;
+
+  color: var(--primary);
+
+  margin-bottom: 25px;
+}
+
+.intro-content p {
+  line-height: 1.9;
+
+  color: var(--text-light);
+
+  max-width: 650px;
+
+  margin-bottom: 35px;
+}
+/* ==================================================
+                STATISTICS SECTION
+================================================== */
+
+.stats-section {
+  padding: 20px 0;
+}
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  padding: 40px 25px;
+
+  text-align: center;
+
+  backdrop-filter: blur(15px);
+
+  transition: all 0.35s ease;
+
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+
+  border-color: var(--primary);
+
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.18);
+}
+
+.stat-card h2 {
+  font-size: 3rem;
+
+  color: var(--primary);
+
+  margin-bottom: 15px;
+
+  font-weight: 700;
+}
+
+.stat-card p {
+  color: var(--text-light);
+
+  font-size: 1rem;
+
+  line-height: 1.6;
+}
+/* ==================================================
+                TIMELINE SECTION
+================================================== */
+
+.timeline-section {
+  padding: 40px 0;
+}
+
+.timeline {
+  position: relative;
+
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 18px;
+
+  top: 0;
+
+  width: 2px;
+
+  height: 100%;
+
+  background: rgba(59, 130, 246, 0.35);
+}
+
+.timeline-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 30px;
+
+  margin-bottom: 60px;
+
+  position: relative;
+}
+
+.timeline-dot {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: var(--primary);
+
+  border: 6px solid rgba(59, 130, 246, 0.15);
+
+  flex-shrink: 0;
+}
+
+.timeline-card {
+  flex: 1;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  backdrop-filter: blur(15px);
+
+  transition: all 0.35s ease;
+}
+
+.timeline-card:hover {
+  transform: translateX(10px);
+
+  border-color: var(--primary);
+}
+
+.timeline-card span {
+  color: var(--primary);
+
+  font-weight: 700;
+}
+
+.timeline-card h3 {
+  margin: 12px 0;
+
+  font-size: 1.5rem;
+}
+
+.timeline-card p {
+  line-height: 1.8;
+
+  color: var(--text-light);
+}
+/* ==================================================
+                TECHNOLOGY GRID
+================================================== */
+
+.tech-section {
+  padding: 40px 0 120px;
+}
+
+.tech-heading {
+  text-align: center;
+
+  font-size: 2.8rem;
+
+  margin-bottom: 60px;
+}
+
+.tech-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+  gap: 25px;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 24px;
+
+  padding: 35px 20px;
+
+  text-align: center;
+
+  backdrop-filter: blur(15px);
+
+  transition: all 0.35s ease;
+
+  cursor: pointer;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+
+  border-color: var(--primary);
+
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.18);
+}
+
+.tech-icon {
+  font-size: 3rem;
+
+  color: var(--primary);
+
+  margin-bottom: 18px;
+
+  transition: 0.35s;
+}
+
+.tech-card:hover .tech-icon {
+  transform: rotate(10deg) scale(1.15);
+}
+
+.tech-card span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-weight: 600;
+
+  color: var(--text);
+}
+/* ==================================================
+                RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width: 992px) {
+  .intro-section {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+  }
+
+  .intro-content {
+    align-items: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-content h2 {
+    font-size: 2.6rem;
+  }
+
+  .intro-content h3 {
+    font-size: 1.3rem;
+  }
+}
