@@ -12,26 +12,20 @@ function Navbar() {
 
   return (
     <header className="navbar">
-      <div className="container navbar-container">
-        <div className="logo">US</div>
-
-        <nav>
-          <ul className="nav-links">
-            {navLinks.map((link) => (
-              <li key={link.path}>
-                <NavLink
-                  to={link.path}
-                  className={({ isActive }) => (isActive ? "active" : "")}
-                >
-                  {link.name}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        <button className="theme-btn">🌙</button>
-      </div>
+      <nav className="navbar-nav">
+        <ul className="nav-links">
+          {navLinks.map((link) => (
+            <li key={link.path}>
+              <NavLink
+                to={link.path}
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                {link.name}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

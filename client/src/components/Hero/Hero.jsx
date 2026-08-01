@@ -1,54 +1,48 @@
 import "./Hero.css";
-import profile from "../../assets/images/profile.jpeg";
-import { TypeAnimation } from "react-type-animation";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import portfolioData from "../../data/portfolioData";
+
 function Hero() {
   return (
     <section className="hero">
-      <div className="hero-background">
-        <div className="gradient-circle circle-one"></div>
-        <div className="gradient-circle circle-two"></div>
-      </div>
-      <div className="container hero-container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            Available for Full Stack Opportunities
-          </div>
-          <h1 className="hero-name">{portfolioData.personal.fullName}</h1>
+      <div className="hero-content">
+        <motion.h1
+          className="hero-name"
+          initial={{
+            opacity: 0,
+            scale: 0.9,
+            filter: "blur(2px)",
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+            filter: "blur(0px)",
+          }}
+          transition={{
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          {portfolioData.personal.fullName}
+        </motion.h1>
 
-          <TypeAnimation
-            sequence={[
-              ...portfolioData.personal.roleSequence.flatMap((role) => [
-                role,
-                2000,
-              ]),
-            ]}
-            wrapper="h2"
-            speed={40}
-            repeat={Infinity}
-            className="hero-role"
-          />
+        <p className="hero-description">{portfolioData.personal.description}</p>
 
-          <p className="hero-description">
-            {portfolioData.personal.description}
-          </p>
+        <div className="hero-buttons">
+          <Link to="/projects" className="hero-btn primary-btn">
+            View Projects
+          </Link>
 
-          <div className="hero-buttons">
-            <button className="primary-btn">
-              {portfolioData.buttons.primary}
-            </button>
+          <a href="/resume.pdf" rel="noopener noreferrer" className="hero-btn secondary-btn">Resume</a>
 
-            <button className="secondary-btn">
-              {portfolioData.buttons.secondary}
-            </button>
-          </div>
-          <SocialLinks />
+          <Link to="/contact" className="hero-btn secondary-btn">
+            Contact
+          </Link>
         </div>
 
-        <div className="hero-image">
-          <img src={profile} alt="Utsav Shrivastav" />
-        </div>
+        <SocialLinks />
       </div>
     </section>
   );

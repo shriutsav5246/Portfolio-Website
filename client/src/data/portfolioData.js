@@ -20,8 +20,7 @@ const portfolioData = {
 
     description:
       "I am a final-year Computer Science Engineering student at NIMS University with a strong focus on Full Stack Development. I enjoy designing responsive user interfaces, developing efficient backend systems, and continuously improving through practical projects and real-world problem solving.",
-
-    image: "/src/assets/images/profile.jpeg",
+      image: "/src/assets/images/profile.jpeg",
   },
 
   social: {
@@ -33,12 +32,6 @@ const portfolioData = {
 
     email: "mailto:utsav.vinod5246@gmail.com",
   },
-
-  buttons: {
-    primary: "View Projects",
-    secondary: "Contact Me",
-  },
-
   about: {
     introduction:
       "I am a final-year B.Tech Computer Science Engineering student at NIMS University, Jaipur, with a strong interest in building scalable and user-centric web applications. My primary focus is Full Stack Development, where I enjoy transforming ideas into practical software solutions.",

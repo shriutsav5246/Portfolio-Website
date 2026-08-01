@@ -9,7 +9,6 @@ function SocialLinks() {
     <div className="social-links">
       <a
         href="https://github.com/shriutsav5246"
-        target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub"
         title="GitHub"
@@ -19,7 +18,6 @@ function SocialLinks() {
 
       <a
         href="https://www.linkedin.com/in/shriutsav5246/"
-        target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn"
         title="LinkedIn"
@@ -29,7 +27,6 @@ function SocialLinks() {
 
       <a
         href="https://leetcode.com/u/shirutsav5246/"
-        target="_blank"
         rel="noopener noreferrer"
         aria-label="LeetCode"
         title="LeetCode"
