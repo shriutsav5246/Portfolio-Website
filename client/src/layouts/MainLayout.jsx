@@ -1,21 +1,44 @@
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { useEffect } from "react";
 
 import Navbar from "../components/Navbar/Navbar";
-
-import heroBackground from "../assets/images/hero-background.png";
 
 import "./MainLayout.css";
 
 function MainLayout() {
   const location = useLocation();
 
+  /* =========================================
+            DYNAMIC BROWSER TAB TITLE
+  ========================================= */
+
+  useEffect(() => {
+    const pageTitles = {
+      "/": "Utsav Shrivastav | Portfolio",
+      "/about": "About | Utsav Shrivastav",
+      "/skills": "Skills | Utsav Shrivastav",
+      "/projects": "Projects | Utsav Shrivastav",
+      "/contact": "Contact | Utsav Shrivastav",
+    };
+
+    document.title =
+      pageTitles[location.pathname] || "Utsav Shrivastav | Portfolio";
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar />
 
-      <main className="layout">
-        {/* Left Side */}
+      <main
+        className={`layout ${
+          location.pathname === "/" ? "layout-home" : "layout-scrollable"
+        }`}
+      >
+        {/* =========================================
+                    PAGE CONTENT
+        ========================================= */}
+
         <section className="layout-content">
           <AnimatePresence mode="wait">
             <motion.div
@@ -44,11 +67,6 @@ function MainLayout() {
             </motion.div>
           </AnimatePresence>
         </section>
-
-        {/* Right Side (Persistent Image) */}
-        <aside className="layout-image">
-          <img src={heroBackground} alt="Background Portrait" />
-        </aside>
       </main>
     </>
   );

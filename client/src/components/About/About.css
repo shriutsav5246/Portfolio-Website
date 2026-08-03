@@ -1,374 +1,663 @@
 /* ==================================================
-                ABOUT SECTION
+                  ABOUT SECTION
 ================================================== */
 
 .about {
-  padding: 120px 8%;
+  width: 100%;
+  min-height: 100vh;
 
-  background: var(--bg-color);
+  padding: 0 0 120px 60px;
+
+  background: transparent;
 }
+
+/*
+  Main About content is intentionally restricted
+  to the left side of the viewport.
+
+  The right side remains visually available for
+  the persistent background portrait.
+*/
 
 .about .container {
-  display: flex;
+  width: 58%;
+  max-width: none;
 
+  margin: 0;
+
+  display: flex;
   flex-direction: column;
 
-  gap: 120px;
+  gap: 110px;
 }
+
+
 /* ==================================================
-                INTRO SECTION
+                  INTRO SECTION
 ================================================== */
 
 .intro-section {
-  display: grid;
-
-  grid-template-columns: 420px 1fr;
-
-  gap: 80px;
-
-  align-items: center;
-
-  min-height: 85vh;
-}
-
-.intro-image {
-  display: flex;
-
-  justify-content: center;
-}
-
-.intro-image img {
   width: 100%;
+  min-height: 100vh;
 
-  max-width: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-  border-radius: 30px;
-
-  padding: 10px;
-
-  background: rgba(255, 255, 255, 0.04);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(15px);
-
-  box-shadow:
-    0 20px 45px rgba(0, 0, 0, 0.35),
-    0 0 45px rgba(59, 130, 246, 0.15);
+  padding: 80px 0 20px;
 }
 
 .intro-content {
+  width: 100%;
+  max-width: 650px;
+
   display: flex;
-
   flex-direction: column;
-
   align-items: flex-start;
 }
 
+
+/* ---------- About Label ---------- */
+
 .intro-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   padding: 8px 18px;
 
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 999px;
 
-  background: rgba(59, 130, 246, 0.12);
+  background: rgba(255, 255, 255, 0.04);
 
-  color: var(--primary);
+  color: #d8d8d8;
 
+  font-size: 0.82rem;
   font-weight: 600;
 
-  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+
+  backdrop-filter: blur(12px);
 }
+
+
+/* ---------- Main Heading ---------- */
 
 .intro-content h2 {
-  font-size: 3.6rem;
+  margin-bottom: 14px;
 
-  margin-bottom: 15px;
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: clamp(3rem, 4.3vw, 5rem);
+  font-weight: 700;
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  color: #ffffff;
 }
+
+
+/* ---------- Role ---------- */
 
 .intro-content h3 {
-  font-size: 1.7rem;
+  margin-bottom: 26px;
 
-  color: var(--primary);
+  font-size: 1.35rem;
+  font-weight: 500;
 
-  margin-bottom: 25px;
+  letter-spacing: 0.2px;
+
+  color: #c5c5c5;
 }
 
+
+/* ---------- Description ---------- */
+
 .intro-content p {
+  width: 100%;
+  max-width: 610px;
+
+  margin: 0;
+
+  color: #c8c8c8;
+
+  font-size: 1.03rem;
+
   line-height: 1.9;
-
-  color: var(--text-light);
-
-  max-width: 650px;
-
-  margin-bottom: 35px;
 }
 /* ==================================================
                 STATISTICS SECTION
 ================================================== */
 
 .stats-section {
+  width: 100%;
+
   padding: 20px 0;
 }
 
+
+/* ---------- Statistics Grid ---------- */
+
 .stats-grid {
+  width: 100%;
+
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 30px;
+  gap: 22px;
 }
+
+
+/* ---------- Statistics Card ---------- */
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.04);
+  min-height: 170px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
-  border-radius: 24px;
+  padding: 30px;
 
-  padding: 40px 25px;
+  text-align: left;
 
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
 
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.035);
 
-  transition: all 0.35s ease;
+  backdrop-filter: blur(16px);
 
   cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+/* ---------- Statistics Hover ---------- */
 
 .stat-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 
-  border-color: var(--primary);
+  border-color: rgba(255, 255, 255, 0.3);
 
-  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.18);
+  background: rgba(255, 255, 255, 0.065);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(255, 255, 255, 0.04);
 }
+
+
+/* ---------- Statistics Number ---------- */
 
 .stat-card h2 {
-  font-size: 3rem;
+  margin-bottom: 10px;
 
-  color: var(--primary);
+  color: #ffffff;
 
-  margin-bottom: 15px;
+  font-family: "Space Grotesk", sans-serif;
 
+  font-size: 2.8rem;
   font-weight: 700;
+
+  line-height: 1;
 }
+
+
+/* ---------- Statistics Label ---------- */
 
 .stat-card p {
-  color: var(--text-light);
+  color: #bdbdbd;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
 
-  line-height: 1.6;
+  line-height: 1.5;
 }
 /* ==================================================
-                TIMELINE SECTION
+                  TIMELINE SECTION
 ================================================== */
 
 .timeline-section {
-  padding: 40px 0;
+  width: 100%;
+
+  padding: 30px 0;
 }
+
+
+/* ---------- Timeline Container ---------- */
 
 .timeline {
   position: relative;
 
-  max-width: 850px;
+  width: 100%;
+  max-width: 100%;
 
-  margin: auto;
+  margin: 0;
 }
+
+
+/* ---------- Vertical Timeline Line ---------- */
 
 .timeline::before {
   content: "";
 
   position: absolute;
 
-  left: 18px;
-
   top: 0;
+  bottom: 0;
+  left: 17px;
 
-  width: 2px;
+  width: 1px;
 
-  height: 100%;
-
-  background: rgba(59, 130, 246, 0.35);
+  background: rgba(255, 255, 255, 0.18);
 }
+
+
+/* ---------- Timeline Item ---------- */
 
 .timeline-item {
-  display: flex;
+  position: relative;
 
+  display: flex;
   align-items: flex-start;
 
-  gap: 30px;
+  gap: 26px;
 
-  margin-bottom: 60px;
-
-  position: relative;
+  margin-bottom: 38px;
 }
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ---------- Timeline Dot ---------- */
 
 .timeline-dot {
-  width: 38px;
+  position: relative;
 
-  height: 38px;
+  z-index: 2;
 
-  border-radius: 50%;
-
-  background: var(--primary);
-
-  border: 6px solid rgba(59, 130, 246, 0.15);
+  width: 35px;
+  height: 35px;
 
   flex-shrink: 0;
+
+  border: 7px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  background: #d4d4d4;
+
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.08);
 }
+
+
+/* ---------- Timeline Card ---------- */
 
 .timeline-card {
-  flex: 1;
+  width: 100%;
 
-  background: rgba(255, 255, 255, 0.04);
+  padding: 26px 28px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 20px;
 
-  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.035);
 
-  padding: 28px;
+  backdrop-filter: blur(16px);
 
-  backdrop-filter: blur(15px);
-
-  transition: all 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+/* ---------- Timeline Hover ---------- */
 
 .timeline-card:hover {
-  transform: translateX(10px);
+  transform: translateX(6px);
 
-  border-color: var(--primary);
+  border-color: rgba(255, 255, 255, 0.3);
+
+  background: rgba(255, 255, 255, 0.065);
+
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(255, 255, 255, 0.035);
 }
+
+
+/* ---------- Timeline Year ---------- */
 
 .timeline-card span {
-  color: var(--primary);
+  color: #bcbcbc;
 
-  font-weight: 700;
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  letter-spacing: 1px;
 }
+
+
+/* ---------- Timeline Heading ---------- */
 
 .timeline-card h3 {
-  margin: 12px 0;
+  margin: 9px 0 10px;
 
-  font-size: 1.5rem;
+  color: #ffffff;
+
+  font-size: 1.35rem;
+  font-weight: 600;
 }
+
+
+/* ---------- Timeline Description ---------- */
 
 .timeline-card p {
-  line-height: 1.8;
+  margin: 0;
 
-  color: var(--text-light);
+  color: #bdbdbd;
+
+  font-size: 0.96rem;
+
+  line-height: 1.75;
 }
 /* ==================================================
-                TECHNOLOGY GRID
+                  TECHNOLOGY SECTION
 ================================================== */
 
 .tech-section {
-  padding: 40px 0 120px;
+  width: 100%;
+
+  padding: 30px 0 80px;
 }
+
+
+/* ---------- Technology Heading ---------- */
 
 .tech-heading {
-  text-align: center;
+  margin-bottom: 40px;
 
-  font-size: 2.8rem;
+  text-align: left;
 
-  margin-bottom: 60px;
+  color: #ffffff;
+
+  font-family: "Space Grotesk", sans-serif;
+
+  font-size: 2.4rem;
+  font-weight: 650;
+
+  letter-spacing: -1.5px;
 }
+
+
+/* ---------- Technology Grid ---------- */
 
 .tech-grid {
+  width: 100%;
+
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
-  gap: 25px;
+  gap: 16px;
 }
 
+
+/* ---------- Technology Card ---------- */
+
 .tech-card {
-  background: rgba(255, 255, 255, 0.04);
+  min-height: 135px;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-  border-radius: 24px;
-
-  padding: 35px 20px;
+  padding: 22px 14px;
 
   text-align: center;
 
-  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 20px;
 
-  transition: all 0.35s ease;
+  background: rgba(255, 255, 255, 0.035);
+
+  backdrop-filter: blur(16px);
 
   cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
+
+
+/* ---------- Technology Hover ---------- */
 
 .tech-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 
-  border-color: var(--primary);
+  border-color: rgba(255, 255, 255, 0.3);
 
-  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.18);
+  background: rgba(255, 255, 255, 0.065);
+
+  box-shadow:
+    0 16px 30px rgba(0, 0, 0, 0.5),
+    0 0 18px rgba(255, 255, 255, 0.035);
 }
+
+
+/* ---------- Technology Icon ---------- */
 
 .tech-icon {
-  font-size: 3rem;
+  margin-bottom: 13px;
 
-  color: var(--primary);
+  color: #d6d6d6;
 
-  margin-bottom: 18px;
+  font-size: 2.25rem;
 
-  transition: 0.35s;
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
 }
+
+
+/* ---------- Icon Hover ---------- */
 
 .tech-card:hover .tech-icon {
-  transform: rotate(10deg) scale(1.15);
+  transform: translateY(-3px) scale(1.08);
+
+  color: #ffffff;
 }
+
+
+/* ---------- Technology Name ---------- */
 
 .tech-card span {
   display: block;
 
-  margin-top: 8px;
+  color: #d0d0d0;
 
-  font-weight: 600;
-
-  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 /* ==================================================
-                RESPONSIVE DESIGN
+                  RESPONSIVE DESIGN
 ================================================== */
 
-@media (max-width: 992px) {
-  .intro-section {
-    grid-template-columns: 1fr;
 
-    text-align: center;
+/* ---------- Smaller Desktop / Laptop ---------- */
+
+@media (max-width: 1200px) {
+  .about {
+    padding-left: 45px;
+  }
+
+  .about .container {
+    width: 62%;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px) {
+  .about {
+    padding:
+      0
+      40px
+      100px;
+  }
+
+  .about .container {
+    width: 100%;
+  }
+
+  .intro-section {
+    width: 100%;
+
+    min-height: 100vh;
   }
 
   .intro-content {
-    align-items: center;
+    max-width: 620px;
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+
+/* ---------- Mobile / Large Phone ---------- */
 
 @media (max-width: 768px) {
+  .about {
+    padding:
+      0
+      28px
+      80px;
+  }
+
+  .about .container {
+    gap: 85px;
+  }
+
+  .intro-section {
+    min-height: 100vh;
+
+    padding-top: 100px;
+  }
+
+  .intro-content h2 {
+    font-size: 3rem;
+
+    letter-spacing: -2px;
+  }
+
+  .intro-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .intro-content p {
+    font-size: 0.98rem;
+
+    line-height: 1.8;
+  }
+
   .timeline::before {
-    display: none;
+    left: 15px;
+  }
+
+  .timeline-dot {
+    width: 31px;
+    height: 31px;
+
+    border-width: 6px;
+  }
+
+  .timeline-item {
+    gap: 20px;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+
+/* ---------- Small Mobile ---------- */
+
 @media (max-width: 576px) {
+  .about {
+    padding:
+      0
+      20px
+      70px;
+  }
+
+  .about .container {
+    gap: 70px;
+  }
+
+  .intro-content h2 {
+    font-size: 2.5rem;
+
+    letter-spacing: -1.5px;
+  }
+
+  .intro-content h3 {
+    font-size: 1.05rem;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
 
-  .intro-content h2 {
-    font-size: 2.6rem;
+  .stat-card {
+    min-height: 145px;
+
+    padding: 26px;
   }
 
-  .intro-content h3 {
-    font-size: 1.3rem;
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .tech-card {
+    min-height: 120px;
+
+    padding: 18px 10px;
+  }
+
+  .tech-heading {
+    font-size: 2rem;
   }
 }
