@@ -1,38 +1,183 @@
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-function ProjectCard({ project }) {
+import { FaArrowRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+function ProjectCard({ project, index = 0 }) {
   const navigate = useNavigate();
+
+  /* =========================================
+              OPEN PROJECT DETAILS
+  ========================================= */
 
   const handleCardClick = () => {
     navigate(`/projects/${project.slug}`);
   };
 
+  /* =========================================
+                  LIVE DEMO
+  ========================================= */
+
+  const handleLiveDemo = (event) => {
+    event.stopPropagation();
+
+    if (project.live && project.live !== "#") {
+      window.open(project.live, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  /* =========================================
+                    GITHUB
+  ========================================= */
+
+  const handleGitHub = (event) => {
+    event.stopPropagation();
+
+    if (project.github && project.github !== "#") {
+      window.open(project.github, "_blank", "noopener,noreferrer");
+    }
+  };
+
+  const hasLiveDemo = project.live && project.live !== "#";
+  const hasGitHub = project.github && project.github !== "#";
+
   return (
-    <div className="project-card" onClick={handleCardClick}>
+    <motion.article
+      layout
+      className={`project-card ${
+        project.featured ? "project-card-featured" : ""
+      }`}
+      onClick={handleCardClick}
+      initial={{
+        opacity: 0,
+        y: 45,
+        scale: 0.98,
+      }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        scale: 1,
+      }}
+      exit={{
+        opacity: 0,
+        y: 20,
+        scale: 0.97,
+      }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.07,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      whileHover={{
+        y: -6,
+      }}
+    >
+      {/* =========================================
+                    PROJECT PREVIEW
+      ========================================= */}
+
       <div className="project-image">
-        <span>{project.title}</span>
+        {project.image ? (
+          <img src={project.image} alt={`${project.title} project preview`} />
+        ) : (
+          <div className="project-placeholder">
+            <div className="project-placeholder-number">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div className="project-placeholder-content">
+              <span className="project-placeholder-category">
+                {project.category}
+              </span>
+
+              <h3>{project.title}</h3>
+            </div>
+          </div>
+        )}
+
+        <div className="project-image-overlay" />
+
+        {/* =========================================
+                    FEATURED LABEL
+        ========================================= */}
+
+        {project.featured && (
+          <span className="project-featured-label">Featured</span>
+        )}
       </div>
 
-      <div className="project-content">
-        <h3>{project.title}</h3>
+      {/* =========================================
+                    PROJECT CONTENT
+      ========================================= */}
 
-        <p>{project.shortDescription}</p>
+      <div className="project-content">
+        {/* PROJECT NUMBER + CATEGORY */}
+
+        <div className="project-meta">
+          <span className="project-number">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+
+          <span className="project-category">{project.category}</span>
+        </div>
+
+        {/* PROJECT TITLE */}
+
+        <div className="project-title-row">
+          <h3>{project.title}</h3>
+
+          <span className="project-details-arrow">
+            <FaArrowRight />
+          </span>
+        </div>
+
+        {/* DESCRIPTION */}
+
+        <p className="project-description">{project.shortDescription}</p>
+
+        {/* =========================================
+                      TECHNOLOGIES
+        ========================================= */}
 
         <div className="tech-stack">
           {project.technologies.map((tech) => (
-            <span key={tech} className="tech-badge">
+            <span key={`${project.id}-${tech}`} className="tech-badge">
               {tech}
             </span>
           ))}
         </div>
 
-        <div className="project-buttons">
-          <button onClick={(e) => e.stopPropagation()}>Live Demo</button>
+        {/* =========================================
+                        ACTIONS
+        ========================================= */}
 
-          <button onClick={(e) => e.stopPropagation()}>GitHub</button>
+        <div className="project-buttons">
+          <button
+            type="button"
+            className="project-live-btn"
+            onClick={handleLiveDemo}
+            disabled={!hasLiveDemo}
+            aria-label={`Open ${project.title} live demo`}
+          >
+            <FaExternalLinkAlt />
+
+            <span>Live Demo</span>
+          </button>
+
+          <button
+            type="button"
+            className="project-github-btn"
+            onClick={handleGitHub}
+            disabled={!hasGitHub}
+            aria-label={`Open ${project.title} GitHub repository`}
+          >
+            <FaGithub />
+
+            <span>GitHub</span>
+          </button>
         </div>
       </div>
-    </div>
+    </motion.article>
   );
 }
 

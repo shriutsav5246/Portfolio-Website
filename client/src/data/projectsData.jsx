@@ -1,4 +1,8 @@
 export const projects = [
+  /* ==================================================
+                    PORTFOLIO WEBSITE
+  ================================================== */
+
   {
     id: 1,
 
@@ -13,10 +17,10 @@ export const projects = [
     image: "",
 
     shortDescription:
-      "A modern developer portfolio built using React with reusable components, smooth animations, responsive layouts and a clean UI.",
+      "A modern developer portfolio built with React, featuring reusable components, responsive layouts, smooth page transitions, and a clean interactive interface.",
 
     fullDescription:
-      "A personal developer portfolio showcasing my technical skills, projects and achievements. It is built with React, React Router and Framer Motion using a modular component architecture and responsive design principles.",
+      "A personal developer portfolio designed and developed to showcase my technical skills, projects, experience, and professional profile. The application uses React with a modular component architecture, React Router for navigation, Framer Motion for animations, and responsive CSS for consistent usability across different screen sizes.",
 
     technologies: [
       "React",
@@ -28,9 +32,10 @@ export const projects = [
 
     features: [
       "Responsive Design",
-      "Reusable Components",
+      "Reusable React Components",
+      "Dynamic Page Navigation",
       "Smooth Page Transitions",
-      "Modern UI",
+      "Interactive UI",
       "Project Showcase",
     ],
 
@@ -38,6 +43,10 @@ export const projects = [
 
     live: "#",
   },
+
+  /* ==================================================
+                        SKILL SWAP
+  ================================================== */
 
   {
     id: 2,
@@ -53,10 +62,10 @@ export const projects = [
     image: "",
 
     shortDescription:
-      "A MERN based skill exchange platform where users can create profiles, connect with others and exchange skills.",
+      "A MERN-based skill exchange platform where users can create profiles, showcase their skills, connect with other users, and exchange knowledge.",
 
     fullDescription:
-      "Skill Swap is a full-stack MERN application where users can showcase the skills they possess and discover people willing to exchange knowledge. The platform provides authentication, profile management and secure interaction between users.",
+      "Skill Swap is a full-stack MERN application designed to connect people interested in exchanging skills and knowledge. Users can create accounts, complete their profiles, list their skills, discover other users, and interact through a secure authenticated environment.",
 
     technologies: [
       "React",
@@ -68,9 +77,10 @@ export const projects = [
     ],
 
     features: [
-      "JWT Authentication",
+      "User Authentication",
+      "JWT Authorization",
       "User Profiles",
-      "Skill Exchange",
+      "Skill Management",
       "Protected Routes",
       "MongoDB Database",
     ],
@@ -79,6 +89,10 @@ export const projects = [
 
     live: "#",
   },
+
+  /* ==================================================
+                    NEXUS NOTES
+  ================================================== */
 
   {
     id: 3,
@@ -94,30 +108,30 @@ export const projects = [
     image: "",
 
     shortDescription:
-      "A note management application that allows users to create, edit and organize notes.",
+      "A full-stack note management application for creating, editing, organizing, and managing personal notes through a clean and responsive interface.",
 
     fullDescription:
-      "Nexus Notes is a note management application designed to help users create, edit, organize and manage notes efficiently through a clean and responsive interface.",
+      "Nexus Notes is a full-stack note management application designed to provide users with an organized environment for managing personal notes. The application supports core note-management operations through a responsive frontend connected to a backend API and database.",
 
-    technologies: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB"],
 
     features: [
       "Create Notes",
-      "Update Notes",
+      "Edit Notes",
       "Delete Notes",
-      "Responsive UI",
-      "Organized Dashboard",
+      "Note Management",
+      "Responsive Interface",
+      "Database Integration",
     ],
 
     github: "#",
 
     live: "#",
   },
+
+  /* ==================================================
+                    WEBSITE CLONES
+  ================================================== */
 
   {
     id: 4,
@@ -133,30 +147,30 @@ export const projects = [
     image: "",
 
     shortDescription:
-      "A collection of responsive website clones including Groww, Flipkart, Swiggy and MakeMyTrip.",
+      "A collection of frontend recreations of popular websites developed to strengthen responsive design, layout construction, and UI development skills.",
 
     fullDescription:
-      "A collection of frontend clone projects built to strengthen UI development, responsive layouts and component structuring skills by recreating real-world websites.",
+      "A collection of frontend projects created by recreating interfaces inspired by popular websites including Groww, Flipkart, Swiggy, and MakeMyTrip. These projects helped strengthen practical knowledge of HTML, CSS, JavaScript, responsive layouts, and real-world interface development.",
 
-    technologies: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Responsive Design",
-    ],
+    technologies: ["HTML", "CSS", "JavaScript", "Responsive Design"],
 
     features: [
       "Groww Clone",
       "Flipkart Clone",
       "Swiggy Clone",
       "MakeMyTrip Clone",
-      "Responsive Layout",
+      "Responsive Layouts",
+      "UI Recreation",
     ],
 
     github: "#",
 
     live: "#",
   },
+
+  /* ==================================================
+                STUDENT MANAGEMENT SYSTEM
+  ================================================== */
 
   {
     id: 5,
@@ -172,22 +186,20 @@ export const projects = [
     image: "",
 
     shortDescription:
-      "A desktop application to manage student records with CRUD operations.",
+      "A Java-based student management application designed to organize student records and perform essential CRUD operations with database integration.",
 
     fullDescription:
-      "A Java-based desktop application developed for efficiently managing student records. It supports CRUD operations and demonstrates structured database interaction.",
+      "A Java-based application developed for managing student information in a structured manner. The system demonstrates object-oriented programming concepts, CRUD operations, database connectivity, record management, and basic search functionality.",
 
-    technologies: [
-      "Java",
-      "MySQL",
-    ],
+    technologies: ["Java", "MySQL"],
 
     features: [
-      "CRUD Operations",
-      "Student Records",
-      "Database Integration",
+      "Create Student Records",
+      "Update Records",
+      "Delete Records",
       "Search Functionality",
-      "Simple UI",
+      "MySQL Integration",
+      "CRUD Operations",
     ],
 
     github: "#",

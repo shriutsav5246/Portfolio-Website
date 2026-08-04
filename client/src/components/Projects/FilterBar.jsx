@@ -1,13 +1,45 @@
-function FilterBar() {
+import { motion } from "framer-motion";
+
+const filters = ["All", "Full Stack", "Frontend", "Java"];
+
+function FilterBar({ activeFilter, setActiveFilter }) {
   return (
     <div className="filter-bar">
-      <button className="active">All</button>
+      {filters.map((filter) => {
+        const isActive = activeFilter === filter;
 
-      <button>Full Stack</button>
+        return (
+          <motion.button
+            key={filter}
+            type="button"
+            className={isActive ? "active" : ""}
+            onClick={() => setActiveFilter(filter)}
+            whileHover={{
+              y: -2,
+            }}
+            whileTap={{
+              scale: 0.96,
+            }}
+            transition={{
+              duration: 0.2,
+            }}
+          >
+            <span>{filter}</span>
 
-      <button>Frontend</button>
-
-      <button>Java</button>
+            {isActive && (
+              <motion.span
+                className="filter-active-dot"
+                layoutId="project-filter-indicator"
+                transition={{
+                  type: "spring",
+                  stiffness: 450,
+                  damping: 32,
+                }}
+              />
+            )}
+          </motion.button>
+        );
+      })}
     </div>
   );
 }

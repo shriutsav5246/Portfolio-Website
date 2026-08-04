@@ -1,5 +1,7 @@
 import "./Skills.css";
 
+import { motion } from "framer-motion";
+
 import { skillCategories } from "../../data/skillsData";
 
 import SkillCategory from "./SkillCategory";
@@ -7,26 +9,51 @@ import SkillCategory from "./SkillCategory";
 function Skills() {
   return (
     <section className="skills">
-      <div className="container">
-        <div className="skills-header">
-          <span className="skills-tag">MY SKILLS</span>
+      <div className="skills-container">
+        {/* =========================================
+                        HEADER
+        ========================================= */}
 
-          <h2>Technologies & Expertise</h2>
+        <motion.div
+          className="skills-header"
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.65,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        >
+          <h1>Technologies & Expertise</h1>
 
           <p>
-            A collection of technologies, programming languages, frameworks,
-            databases, and development tools that I use to build modern,
-            scalable, and user-friendly applications.
+            A practical overview of the technologies, programming languages,
+            frameworks, databases, and development tools I use across full-stack
+            development and software projects.
           </p>
-        </div>
+        </motion.div>
 
-        {skillCategories.map((category) => (
-          <SkillCategory
-            key={category.title}
-            title={category.title}
-            skills={category.skills}
-          />
-        ))}
+        {/* =========================================
+                    SKILL CATEGORIES
+        ========================================= */}
+
+        <div className="skills-categories">
+          {skillCategories.map((category) => (
+            <SkillCategory
+              key={category.title}
+              title={category.title}
+              skills={category.skills}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

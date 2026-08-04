@@ -20,107 +20,157 @@ import {
 } from "react-icons/si";
 
 export const skillCategories = [
+  /* ==================================================
+                    FRONTEND DEVELOPMENT
+  ================================================== */
+
   {
     title: "Frontend Development",
+
     skills: [
       {
         icon: <FaHtml5 />,
         title: "HTML5",
-        description: "Semantic and accessible webpage structure.",
+        description:
+          "Semantic, accessible, and well-structured web interfaces.",
       },
+
       {
         icon: <FaCss3Alt />,
         title: "CSS3",
-        description: "Responsive layouts using Flexbox and Grid.",
+        description:
+          "Responsive layouts, animations, Flexbox, Grid, and modern UI styling.",
       },
+
       {
         icon: <SiJavascript />,
         title: "JavaScript",
-        description: "Modern ES6+ programming and DOM manipulation.",
+        description:
+          "Modern ES6+ JavaScript, DOM manipulation, and interactive web functionality.",
       },
+
       {
         icon: <FaReact />,
         title: "React",
-        description: "Reusable component-based UI development.",
+        description:
+          "Component-based interfaces, reusable UI architecture, and modern React development.",
       },
     ],
   },
 
+  /* ==================================================
+                    BACKEND DEVELOPMENT
+  ================================================== */
+
   {
     title: "Backend Development",
+
     skills: [
       {
         icon: <FaNodeJs />,
         title: "Node.js",
-        description: "Server-side JavaScript runtime.",
+        description:
+          "Server-side JavaScript development for scalable web applications.",
       },
+
       {
         icon: <SiExpress />,
         title: "Express.js",
-        description: "RESTful backend framework.",
+        description:
+          "REST API development, routing, middleware, and backend application structure.",
       },
     ],
   },
 
+  /* ==================================================
+                        DATABASES
+  ================================================== */
+
   {
     title: "Databases",
+
     skills: [
       {
         icon: <SiMongodb />,
         title: "MongoDB",
-        description: "NoSQL document database.",
+        description:
+          "Document-based data storage and database integration for web applications.",
       },
+
       {
         icon: <SiMysql />,
         title: "MySQL",
-        description: "Relational database management system.",
+        description:
+          "Relational database design, SQL queries, and structured data management.",
       },
     ],
   },
 
+  /* ==================================================
+                  PROGRAMMING LANGUAGES
+  ================================================== */
+
   {
     title: "Programming Languages",
+
     skills: [
       {
         icon: <FaJava />,
         title: "Java",
-        description: "Object-oriented programming language.",
+        description:
+          "Object-oriented programming, problem solving, and data structures.",
       },
+
       {
         icon: <FaPython />,
         title: "Python",
-        description: "Automation, scripting and AI development.",
+        description:
+          "Programming, scripting, backend fundamentals, and academic development.",
       },
     ],
   },
 
+  /* ==================================================
+                    TOOLS & PLATFORMS
+  ================================================== */
+
   {
     title: "Tools & Platforms",
+
     skills: [
       {
         icon: <FaGitAlt />,
         title: "Git",
-        description: "Distributed version control.",
+        description:
+          "Version control, branching, commits, and collaborative development workflows.",
       },
+
       {
         icon: <FaGithub />,
         title: "GitHub",
-        description: "Code hosting and collaboration.",
+        description:
+          "Repository management, project collaboration, and source code hosting.",
       },
+
       {
         icon: <FaDocker />,
         title: "Docker",
-        description: "Containerized application deployment.",
+        description:
+          "Container fundamentals and containerized development environments.",
       },
+
       {
         icon: <FaAws />,
         title: "AWS",
-        description: "Cloud infrastructure and services.",
+        description:
+          "Cloud computing fundamentals and hands-on experience with core AWS services.",
       },
+
       {
         icon: <SiPostman />,
         title: "Postman",
-        description: "API testing and debugging.",
+        description:
+          "REST API testing, request validation, debugging, and development workflows.",
       },
     ],
   },
