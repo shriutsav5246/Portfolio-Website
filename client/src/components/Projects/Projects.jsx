@@ -43,13 +43,11 @@ function Projects() {
           }}
         >
           <h1>
-            Things I've <span>Built.</span>
+            Projects I've Built...
           </h1>
 
           <p>
-            A selection of projects where I applied frontend, backend and
-            full-stack development concepts to build practical applications and
-            improve my software development skills.
+            A selection of projects where I applied frontend, backend and full-stack development concepts as well as android app development concepts to build practical applications and improve my software development skills.
           </p>
         </motion.div>
 

@@ -92,7 +92,7 @@ export const projects = [
 
   /* ==================================================
                     NEXUS NOTES
-  ================================================== */
+================================================== */
 
   {
     id: 3,
@@ -101,27 +101,27 @@ export const projects = [
 
     title: "Nexus Notes Application",
 
-    category: "Full Stack",
+    category: "Android Apps",
 
     featured: true,
 
     image: "",
 
     shortDescription:
-      "A full-stack note management application for creating, editing, organizing, and managing personal notes through a clean and responsive interface.",
+      "A native Android note management application built using Kotlin, Jetpack Compose, and MVVM Architecture for creating, editing, organizing, and managing personal notes.",
 
     fullDescription:
-      "Nexus Notes is a full-stack note management application designed to provide users with an organized environment for managing personal notes. The application supports core note-management operations through a responsive frontend connected to a backend API and database.",
+      "Nexus Notes is a native Android application developed using Kotlin and modern Android development practices. The application follows MVVM Architecture and uses Jetpack Compose for building a declarative user interface. It provides an organized environment for creating, editing, deleting, and managing personal notes while maintaining a clean separation between the UI, application logic, and data layers.",
 
-    technologies: ["React", "Node.js", "Express", "MongoDB"],
+    technologies: ["Kotlin", "Jetpack Compose", "MVVM", "Android"],
 
     features: [
       "Create Notes",
       "Edit Notes",
       "Delete Notes",
-      "Note Management",
-      "Responsive Interface",
-      "Database Integration",
+      "MVVM Architecture",
+      "Jetpack Compose UI",
+      "Modern Android Development",
     ],
 
     github: "#",
@@ -170,7 +170,7 @@ export const projects = [
 
   /* ==================================================
                 STUDENT MANAGEMENT SYSTEM
-  ================================================== */
+================================================== */
 
   {
     id: 5,
@@ -179,31 +179,30 @@ export const projects = [
 
     title: "Student Management System",
 
-    category: "Java",
+    category: "Full Stack",
 
     featured: false,
 
     image: "",
 
     shortDescription:
-      "A Java-based student management application designed to organize student records and perform essential CRUD operations with database integration.",
+      "A Java-based full-stack student management application designed to manage student records through CRUD operations with MySQL database integration.",
 
     fullDescription:
-      "A Java-based application developed for managing student information in a structured manner. The system demonstrates object-oriented programming concepts, CRUD operations, database connectivity, record management, and basic search functionality.",
+      "A Java-based Student Management System developed to manage student information through a structured application and database architecture. The system implements CRUD operations, MySQL database connectivity, record management, and search functionality while applying object-oriented programming and database integration concepts.",
 
-    technologies: ["Java", "MySQL"],
+    technologies: ["Java", "MySQL", "JDBC", "OOP"],
 
     features: [
       "Create Student Records",
+      "View Student Records",
       "Update Records",
       "Delete Records",
       "Search Functionality",
-      "MySQL Integration",
+      "MySQL Database Integration",
       "CRUD Operations",
     ],
 
     github: "#",
-
-    live: "#",
   },
 ];

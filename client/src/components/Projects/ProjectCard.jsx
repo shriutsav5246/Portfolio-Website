@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import { FaArrowRight, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaArrowRight, FaGithub } from "react-icons/fa";
 
 function ProjectCard({ project, index = 0 }) {
   const navigate = useNavigate();
@@ -12,18 +12,6 @@ function ProjectCard({ project, index = 0 }) {
 
   const handleCardClick = () => {
     navigate(`/projects/${project.slug}`);
-  };
-
-  /* =========================================
-                  LIVE DEMO
-  ========================================= */
-
-  const handleLiveDemo = (event) => {
-    event.stopPropagation();
-
-    if (project.live && project.live !== "#") {
-      window.open(project.live, "_blank", "noopener,noreferrer");
-    }
   };
 
   /* =========================================
@@ -38,7 +26,10 @@ function ProjectCard({ project, index = 0 }) {
     }
   };
 
-  const hasLiveDemo = project.live && project.live !== "#";
+  /* =========================================
+                GITHUB AVAILABILITY
+  ========================================= */
+
   const hasGitHub = project.github && project.github !== "#";
 
   return (
@@ -111,17 +102,9 @@ function ProjectCard({ project, index = 0 }) {
       ========================================= */}
 
       <div className="project-content">
-        {/* PROJECT NUMBER + CATEGORY */}
-
-        <div className="project-meta">
-          <span className="project-number">
-            {String(index + 1).padStart(2, "0")}
-          </span>
-
-          <span className="project-category">{project.category}</span>
-        </div>
-
-        {/* PROJECT TITLE */}
+        {/* =========================================
+                    PROJECT TITLE
+        ========================================= */}
 
         <div className="project-title-row">
           <h3>{project.title}</h3>
@@ -131,12 +114,14 @@ function ProjectCard({ project, index = 0 }) {
           </span>
         </div>
 
-        {/* DESCRIPTION */}
+        {/* =========================================
+                    DESCRIPTION
+        ========================================= */}
 
         <p className="project-description">{project.shortDescription}</p>
 
         {/* =========================================
-                      TECHNOLOGIES
+                    TECHNOLOGIES
         ========================================= */}
 
         <div className="tech-stack">
@@ -148,22 +133,10 @@ function ProjectCard({ project, index = 0 }) {
         </div>
 
         {/* =========================================
-                        ACTIONS
+                      GITHUB BUTTON
         ========================================= */}
 
         <div className="project-buttons">
-          <button
-            type="button"
-            className="project-live-btn"
-            onClick={handleLiveDemo}
-            disabled={!hasLiveDemo}
-            aria-label={`Open ${project.title} live demo`}
-          >
-            <FaExternalLinkAlt />
-
-            <span>Live Demo</span>
-          </button>
-
           <button
             type="button"
             className="project-github-btn"
@@ -173,7 +146,7 @@ function ProjectCard({ project, index = 0 }) {
           >
             <FaGithub />
 
-            <span>GitHub</span>
+            <span>View on GitHub</span>
           </button>
         </div>
       </div>

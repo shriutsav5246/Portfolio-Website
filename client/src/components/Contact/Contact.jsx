@@ -8,8 +8,6 @@ function Contact() {
     <section className="contact">
       <div className="container">
         <div className="contact-header">
-          <span className="contact-tag">CONTACT</span>
-
           <h2>Let's Work Together</h2>
 
           <p>

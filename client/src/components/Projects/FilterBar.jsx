@@ -1,6 +1,10 @@
 import { motion } from "framer-motion";
 
-const filters = ["All", "Full Stack", "Frontend", "Java"];
+/* ==================================================
+                  PROJECT FILTERS
+================================================== */
+
+const filters = ["All", "Full Stack", "Android Apps"];
 
 function FilterBar({ activeFilter, setActiveFilter }) {
   return (
