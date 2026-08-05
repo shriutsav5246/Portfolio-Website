@@ -19,7 +19,7 @@ const portfolioData = {
     tagline: "Building modern, scalable, and user-focused web applications.",
 
     description:
-      "I am a final-year Computer Science Engineering student at NIMS University with a strong focus on Full Stack Development. I enjoy designing responsive user interfaces, developing efficient backend systems, and continuously improving through practical projects and real-world problem solving.",
+      "I am a final-year Computer Science Engineering student, focused on building a strong foundation in software development. I work with modern technologies to build practical web / mobile applications, strengthen my problem-solving skills, and continuously grow through hands-on learning and projects.",
       image: "/src/assets/images/profile.jpeg",
   },
 

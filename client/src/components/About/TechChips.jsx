@@ -14,20 +14,41 @@ import {
   FaAws,
 } from "react-icons/fa";
 
-import { SiJavascript, SiExpress, SiMongodb } from "react-icons/si";
+import {
+  SiJavascript,
+  SiExpress,
+  SiMongodb,
+  SiAndroid,
+  SiAndroidstudio,
+  SiKotlin,
+} from "react-icons/si";
 
 const technologies = [
+  // Web Development
   { name: "HTML5", icon: <FaHtml5 /> },
   { name: "CSS3", icon: <FaCss3Alt /> },
   { name: "JavaScript", icon: <SiJavascript /> },
   { name: "React", icon: <FaReact /> },
+
+  // Backend & Database
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Express", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
+
+  // Version Control
   { name: "Git", icon: <FaGitAlt /> },
   { name: "GitHub", icon: <FaGithub /> },
+
+  // Programming Languages
   { name: "Python", icon: <FaPython /> },
   { name: "Java", icon: <FaJava /> },
+  { name: "Kotlin", icon: <SiKotlin /> },
+
+  // App Development
+  { name: "Android", icon: <SiAndroid /> },
+  { name: "Android Studio", icon: <SiAndroidstudio /> },
+
+  // Cloud
   { name: "AWS", icon: <FaAws /> },
 ];
 

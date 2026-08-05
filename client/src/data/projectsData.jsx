@@ -39,7 +39,7 @@ export const projects = [
       "Project Showcase",
     ],
 
-    github: "#",
+    github: "https://github.com/shriutsav5246/Portfolio-Website",
 
     live: "#",
   },
@@ -85,7 +85,7 @@ export const projects = [
       "MongoDB Database",
     ],
 
-    github: "#",
+    github: "https://github.com/sudhanshu11011/Skill-Swap",
 
     live: "#",
   },
@@ -124,7 +124,7 @@ export const projects = [
       "Modern Android Development",
     ],
 
-    github: "#",
+    github: "https://github.com/shriutsav5246/Nexus-Notes",
 
     live: "#",
   },
@@ -163,7 +163,7 @@ export const projects = [
       "UI Recreation",
     ],
 
-    github: "#",
+    github: "https://github.com/shriutsav5246/Website-Clones",
 
     live: "#",
   },
